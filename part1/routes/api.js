@@ -6,10 +6,10 @@ var path = require('path');
 
 // Locations of SQL query files
 var dogwalks = path.join(__dirname, '..', 'database', 'dogwalks.sql');
-var createQuery = fs.readFile(dogwalks, 'utf8');
+var createQuery = fs.readFileSync(dogwalks, 'utf8');
 
 var inserts = path.join(__dirname, '..', 'database', 'insertqueries.sql');
-var insertQuery = fs.readFile(inserts, 'utf8');
+var insertQuery = fs.readFileSync(inserts, 'utf8');
 
 let db;
 
