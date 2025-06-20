@@ -62,6 +62,8 @@ router.get('/', function(req, res, next) {
 });
 
 // using async in route handler because of mysql2/promise
+// using mysql2/promise as that is what was used in starthere/app.js
+
 router.get('/dogs', async (req, res) => {
 
 });
