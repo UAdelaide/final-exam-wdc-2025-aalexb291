@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var mysql = require('mysql2');
+var mysql = require('mysql2/promise');
 var fs = require('fs');
 var path = require('path');
 
