@@ -22,4 +22,4 @@ VALUES
 ((SELECT dog_id FROM Dogs WHERE name='Kevin'), '2025-06-08 11:00:00', 50, 'Kosciuszko', 'cancelled'),
 ((SELECT dog_id FROM Dogs WHERE name='Steve'), '2025-06-12 10:00:00', 30, 'Henley Beach', 'open');
 
-INSERT INTO WalkRatings ()
+INSERT INTO WalkRatings (request_id, )
