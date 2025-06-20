@@ -18,7 +18,8 @@ let db;
     const connection = await mysql.createConnection({
       host: 'localhost',
       user: 'root',
-      password: ''
+      password: '',
+      multipleStatements: true
     });
 
     // Delete existing db, then re-create it based on /database/dogwalks.sql
@@ -31,7 +32,8 @@ let db;
       host: 'localhost',
       user: 'root',
       password: '',
-      database: 'DogWalkService'
+      database: 'DogWalkService',
+      multipleStatements: true
     });
 
     // Insert all test data from /database/insertqueries.sql
