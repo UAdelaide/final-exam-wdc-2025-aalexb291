@@ -18,7 +18,7 @@ let db;
     });
 
     // Delete existing DB, then re-create it based on dogwalks.sql
-    await connection.query('CREATE DATABASE IF NOT EXISTS testdb');
+    await connection.query(createQuery);
     await connection.end();
 
     // Now connect to the created database
