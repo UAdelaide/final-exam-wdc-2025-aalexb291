@@ -9,6 +9,7 @@ VALUES
 
 INSERT INTO Dogs (owner_id, name, size)
 VALUES
+((SELECT user_id))
 
 
 /*
