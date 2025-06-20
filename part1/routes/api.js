@@ -15,7 +15,8 @@ let db;
 
 /* Adapted code snippet from /starthere/app.js
     Simply runs both SQL query files in /database
-    This satisfies 
+    This satisfies the requirement to:
+        "Insert records into the database on startup to allow for testing."
 */
 (async () => {
   try {
