@@ -34,11 +34,12 @@ let db;
     });
 
     // Insert all test data from insertqueries.sql
-    await 
+    await db.query(insertQuery);
   } catch (err) {
     console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
   }
 })();
+
 router.get('/', function(req, res, next) {
   res.status(200).send('Success');
 });
