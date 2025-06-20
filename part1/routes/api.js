@@ -75,7 +75,21 @@ router.get('/dogs', async (req, res) => {
     }
 });
 
-router.get('')
+router.get('/walkrequests/open', async (req, res) => {
+    try {
+        const query = `
+            SELECT Dogs.name, Dogs.size, Users.username
+            FROM Dogs
+            JOIN Users ON Dogs.owner_id = Users.user_id;
+        `;
+
+        const [result] = await db.query(query);
+        res.json(result);
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Failed to fetch dogs' });
+    }
+});
 
 module.exports = router;
 
