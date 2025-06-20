@@ -75,7 +75,7 @@ router.get('/dogs', async (req, res) => {
         const [result] = await connection.query(query);
         res.json(result);
     } catch (error) {
-        res.status(500);
+        res.status(500).json({ error: 'Failed to fetch dogs' });
     }
 
 });
