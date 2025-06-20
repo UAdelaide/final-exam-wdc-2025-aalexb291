@@ -34,7 +34,7 @@ let db;
     await connection.query(createQuery);
     await connection.end();
 
-    // Connect to the DogWalkService db
+    // Connect to the newly created and populated DogWalkService db
     db = await mysql.createConnection({
       host: 'localhost',
       user: 'root',
