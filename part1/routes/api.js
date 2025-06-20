@@ -13,7 +13,7 @@ var insertQuery = fs.readFileSync(inserts, 'utf8');
 
 let db;
 
-/* Adapted code snippet from /starthere/app.js
+/*  Adapted code snippet from /starthere/app.js
     Simply runs both SQL query files in /database
     This satisfies the requirement to:
         "Insert records into the database on startup to allow for testing."
