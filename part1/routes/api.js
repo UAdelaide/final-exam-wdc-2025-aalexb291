@@ -18,10 +18,11 @@ let db;
     });
 
     // Delete existing DB, then re-create it based on dogwalks.sql
+    // This includes creating all tables
     await connection.query(createQuery);
     await connection.end();
 
-    // Now connect to the created database
+    // Connect to the 
     db = await mysql.createConnection({
       host: 'localhost',
       user: 'root',
