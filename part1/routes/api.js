@@ -73,7 +73,7 @@ router.get('/dogs', async (req, res) => {
     `;
 
     const result = await connection.query(query);
-    
+    res.json(result);
 });
 
 module.exports = router;
