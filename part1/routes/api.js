@@ -19,6 +19,8 @@ let db;
       host: 'localhost',
       user: 'root',
       password: '',
+      // this is required to run both sql files without splitting them up
+      // 
       multipleStatements: true
     });
 
@@ -33,6 +35,7 @@ let db;
       user: 'root',
       password: '',
       database: 'DogWalkService',
+      // this is required to run both sql files without splitting them up
       multipleStatements: true
     });
 
