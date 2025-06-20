@@ -3,5 +3,5 @@ var router = express.Router();
 var mysql = require('mysql');
 
 var connection = mysql.createConnection({
-  database: 'sakila'
+  database: 'DogWalkService'
 });
