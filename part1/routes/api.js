@@ -4,7 +4,7 @@ var mysql = require('mysql');
 var fs = require('fs');
 var path = require('path');
 
-var dogwalksSQL = path.join(__dirname, '..', 'database', 'test.sql');
+var dogwalks = path.join(__dirname, '..', 'database', 'dogwalks.sql');
 
 let db;
 
