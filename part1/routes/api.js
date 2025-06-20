@@ -87,7 +87,7 @@ router.get('/walkrequests/open', async (req, res) => {
         res.json(result);
     } catch (error) {
         console.error(error);
-        res.status(500).json({ error: 'Failed to fetch dogs' });
+        res.status(500).json({ error: 'Failed to fetch walk requests' });
     }
 });
 
