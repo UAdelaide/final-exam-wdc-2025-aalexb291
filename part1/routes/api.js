@@ -50,7 +50,7 @@ var insertQuery = fs.readFileSync(inserts, 'utf8');
   }
 })();
 
-const connection = mysql.createConnection({
+const connection = await mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
