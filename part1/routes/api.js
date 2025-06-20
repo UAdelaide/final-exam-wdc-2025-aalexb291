@@ -72,8 +72,8 @@ router.get('/dogs', async (req, res) => {
             JOIN Users ON Dogs.owner_id = Users.user_id;
         `;
 
-        const result = await connection.query(query);
-        res.json(result[0]);
+        const [result] = await connection.query(query);
+        res.json(result);
     } catch (error) {
         res.status(500);
     }
