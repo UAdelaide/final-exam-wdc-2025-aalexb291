@@ -22,13 +22,3 @@ VALUES
 ((SELECT dog_id FROM Dogs WHERE name='Foxy'), '2025-06-08 10:00:00', 60, 'Botanic Gardens', 'completed'),
 ((SELECT dog_id FROM Dogs WHERE name='Kevin'), '2025-06-08 11:00:00', 50, 'Kosciuszko', 'cancelled'),
 ((SELECT dog_id FROM Dogs WHERE name='Steve'), '2025-06-12 10:00:00', 30, 'Henley Beach', 'open');
-
-
-/*
-
-    A request for Max at 2025-06-10 08:00:00 for 30 minutes at Parklands, with status open.
-    A request for Bella at 2025-06-10 09:30:00 for 45 minutes at Beachside Ave, with status accepted.
-    Three more walk requests with details of your choosing.
-
-
-*/
