@@ -14,4 +14,5 @@ WHERE WalkRequests.status='open';
 
 -- Walker Summary
 
-SELECT Users.user_id, COUNT(WalkRequests.rating_id) AS total_ratings, AVG(WalkRequests.rating) AS average_rating, COUNT
+SELECT Users.user_id, COUNT(WalkRequests.rating_id) AS total_ratings, AVG(WalkRequests.rating) AS average_rating, COUNT(WalkRequests.request_id) AS completed_walks
+FROM WalkRatings
