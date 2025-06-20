@@ -6,4 +6,4 @@ JOIN Users ON Dogs.owner_id = Users.user_id;
 
 -- Walk Requests
 
-SELECT 
+SELECT WalkRequests.request_id, 
