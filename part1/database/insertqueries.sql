@@ -13,7 +13,7 @@ VALUES
 ((SELECT user_id from Users where username='carol123'), 'Bella', 'small'),
 ((SELECT user_id from Users where username='carol123'), 'Foxy', 'large'),
 ((SELECT user_id from Users where username='alexb'), 'Kevin', 'small'),
-((SELECT user_id from Users where username='alexb'), 'Kevin', 'small'),
+((SELECT user_id from Users where username='alexb'), 'Steve', 'medium');
 
 
 /*
