@@ -10,12 +10,12 @@ VALUES
 INSERT INTO Dogs (owner_id, name, size)
 VALUES
 ((SELECT user_id from Users WHERE username='alice123'), 'Max', 'medium'),
-((SELECT user_id from Users where username='carol123'), 'Bella', 'small'),
-((SELECT user_id from Users where username='carol123'), 'Foxy', 'large'),
-((SELECT user_id from Users where username='alexb'), 'Kevin', 'small'),
-((SELECT user_id from Users where username='alexb'), 'Steve', 'medium');
+((SELECT user_id from Users WHERE username='carol123'), 'Bella', 'small'),
+((SELECT user_id from Users WHERE username='carol123'), 'Foxy', 'large'),
+((SELECT user_id from Users WHERE username='alexb'), 'Kevin', 'small'),
+((SELECT user_id from Users WHERE username='alexb'), 'Steve', 'medium');
 
-INSERT INTO
+INSERT INTO WalkRequests ()
 
 
 /*
