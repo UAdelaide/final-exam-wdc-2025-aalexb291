@@ -20,7 +20,7 @@ let db;
       user: 'root',
       password: '',
       // this is required to run both sql files without splitting them up
-      // 
+      // learned at https://medium.com/@johnkolo/how-to-run-multiple-sql-queries-directly-from-an-sql-file-in-node-js-part-1-dce1e6dd2def
       multipleStatements: true
     });
 
