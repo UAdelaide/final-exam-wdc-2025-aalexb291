@@ -42,8 +42,7 @@ let db;
     // Insert all test data from /database/insertqueries.sql
     await db.query(insertQuery);
 
-    let query =`SELECT * From Users;`;
-    const 
+    // let query =`SELECT * From Users;`;
 
   } catch (err) {
     console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
