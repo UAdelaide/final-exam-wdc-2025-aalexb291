@@ -61,7 +61,7 @@ router.get('/', function(req, res, next) {
   res.status(200).send('Success');
 });
 
-// using async in route handler because 
+// using async in route handler because of mysql2/promise
 router.get('/dogs', async (req, res) => {
 
 });
