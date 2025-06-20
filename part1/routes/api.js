@@ -44,7 +44,7 @@ let db;
 
     // let query =`SELECT * From Users;`;
 
-    await db.query('SELECT * from Users;');
+    await db.query('SELECT * FROM Users;');
   } catch (err) {
     console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
   }
