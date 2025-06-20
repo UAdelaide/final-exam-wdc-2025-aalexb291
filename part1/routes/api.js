@@ -11,7 +11,7 @@ var createQuery = fs.readFileSync(dogwalks, 'utf8');
 var inserts = path.join(__dirname, '..', 'database', 'insertqueries.sql');
 var insertQuery = fs.readFileSync(inserts, 'utf8');
 
-const db
+const db;
 
 /*  Adapted code snippet from /starthere/app.js
     Simply runs both SQL query files in /database
@@ -35,7 +35,7 @@ const db
     await connection.end();
 
     // Connect to the newly created and populated DogWalkService db
-    const db = await mysql.createConnection({
+    db = await mysql.createConnection({
       host: 'localhost',
       user: 'root',
       password: '',
@@ -51,13 +51,6 @@ const db
     console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
   }
 })();
-
-const connection = await mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'DogWalkService'
-});
 
 router.get('/', function(req, res, next) {
   res.status(200).send('Success');
