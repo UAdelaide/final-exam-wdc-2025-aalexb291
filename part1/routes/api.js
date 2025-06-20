@@ -13,6 +13,7 @@ var insertQuery = fs.readFileSync(inserts, 'utf8');
 
 let db;
 
+// Adapted code snippet from /starthere/app.js
 (async () => {
   try {
     const connection = await mysql.createConnection({
@@ -42,7 +43,6 @@ let db;
     // Insert all test data from /database/insertqueries.sql
     await db.query(insertQuery);
 
-    console.log(await db.query(`SELECT * FROM Users;`));
   } catch (err) {
     console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
   }
