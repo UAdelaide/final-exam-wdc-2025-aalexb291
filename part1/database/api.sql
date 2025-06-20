@@ -1,2 +1,3 @@
 -- Dogs
 
+SELECT Dogs.
