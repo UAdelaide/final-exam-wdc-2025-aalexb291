@@ -11,6 +11,8 @@ var createQuery = fs.readFileSync(dogwalks, 'utf8');
 var inserts = path.join(__dirname, '..', 'database', 'insertqueries.sql');
 var insertQuery = fs.readFileSync(inserts, 'utf8');
 
+const db
+
 /*  Adapted code snippet from /starthere/app.js
     Simply runs both SQL query files in /database
     This satisfies the requirement to:
