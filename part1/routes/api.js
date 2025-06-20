@@ -11,8 +11,6 @@ var createQuery = fs.readFileSync(dogwalks, 'utf8');
 var inserts = path.join(__dirname, '..', 'database', 'insertqueries.sql');
 var insertQuery = fs.readFileSync(inserts, 'utf8');
 
-let db;
-
 /*  Adapted code snippet from /starthere/app.js
     Simply runs both SQL query files in /database
     This satisfies the requirement to:
@@ -35,7 +33,7 @@ let db;
     await connection.end();
 
     // Connect to the newly created and populated DogWalkService db
-    db = await mysql.createConnection({
+    const db = await mysql.createConnection({
       host: 'localhost',
       user: 'root',
       password: '',
