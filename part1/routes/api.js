@@ -61,7 +61,9 @@ router.get('/', function(req, res, next) {
   res.status(200).send('Success');
 });
 
-router.get('/dogs', function(req, rest, next))
+router.get('/dogs', async (req, res) => {
+
+});
 
 module.exports = router;
 
