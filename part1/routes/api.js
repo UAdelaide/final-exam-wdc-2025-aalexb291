@@ -21,7 +21,7 @@ let db;
       password: ''
     });
 
-    // Delete existing DB, then re-create it based on /database/dogwalks.sql
+    // Delete existing db, then re-create it based on /database/dogwalks.sql
     // This includes creating all tables
     await connection.query(createQuery);
     await connection.end();
