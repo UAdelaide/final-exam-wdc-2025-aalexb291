@@ -7,6 +7,8 @@ VALUES
 ('jimmy223', 'jimmy@example.com', 'hashed0123', 'walker'),
 ('alexb', 'alexb@example.com', 'hashed0456', 'owner');
 
+INSERT INTO Dogs (owner_id)
+
 /*
 A user with the username alice123, email alice@example.com, password hash hashed123, and role owner.
 A user with the username bobwalker, email bob@example.com, password hash hashed456, and role walker.
