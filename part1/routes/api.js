@@ -1,8 +1,10 @@
 var express = require('express');
 var router = express.Router();
 var mysql = require('mysql');
-const fs = require('fs');
+var fs = require('fs');
+var path = require('path');
 
+var 
 
 let db;
 
