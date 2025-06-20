@@ -14,4 +14,4 @@ WHERE WalkRequests.status='open';
 
 -- Walker Summary
 
-SELECT Users.user_id, WalkRatings.r
+SELECT Users.user_id, COUNT
