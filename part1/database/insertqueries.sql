@@ -9,11 +9,10 @@ VALUES
 
 INSERT INTO Dogs (owner_id, name, size)
 VALUES
-((SELECT user_id from Users where username='alice123'), )
+((SELECT user_id from Users where username='alice123'), 'medium', '')
 
 
 /*
-
     A dog named Max, who is medium-sized and owned by alice123.
     A dog named Bella, who is small and owned by carol123.
     Three more dogs with details of your choosing.
