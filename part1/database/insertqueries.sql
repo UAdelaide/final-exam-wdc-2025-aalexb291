@@ -15,7 +15,7 @@ VALUES
 ((SELECT user_id from Users WHERE username='alexb'), 'Kevin', 'small'),
 ((SELECT user_id from Users WHERE username='alexb'), 'Steve', 'medium');
 
-INSERT INTO WalkRequests ()
+INSERT INTO WalkRequests (dog_id, requested_time)
 
 
 /*
