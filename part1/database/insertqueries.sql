@@ -1,7 +1,8 @@
 USE DogWalkService;
 INSERT INTO Users
 VALUES
-('alice123', 'alice@example.com')
+('alice123', 'alice@example.com', 'hashed123', 'owner'),
+
 
 /*
 A user with the username alice123, email alice@example.com, password hash hashed123, and role owner.
