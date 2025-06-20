@@ -50,7 +50,9 @@ var insertQuery = fs.readFileSync(inserts, 'utf8');
   }
 })();
 
-const connection = await mysql.createConnection
+const connection = mysql.createConnection({
+    
+});
 
 router.get('/', function(req, res, next) {
   res.status(200).send('Success');
