@@ -51,7 +51,10 @@ var insertQuery = fs.readFileSync(inserts, 'utf8');
 })();
 
 const connection = mysql.createConnection({
-    
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'DogWalkService'
 });
 
 router.get('/', function(req, res, next) {
