@@ -4,8 +4,8 @@ VALUES
 ('alice123', 'alice@example.com', 'hashed123', 'owner'),
 ('bobwalker', 'bob@example.com', 'hashed456', 'walker'),
 ('carol123', 'carol@example.com', 'hashed789', 'owner'),
-('jimmy223', 'jimmy@example.com', 'hashed123', 'owner'),
-('alexb', 'alexb@example.com', 'hashed123', 'owner');
+('jimmy223', 'jimmy@example.com', 'hashed0123', 'walker'),
+('alexb', 'alexb@example.com', 'hashed0456', 'owner');
 
 /*
 A user with the username alice123, email alice@example.com, password hash hashed123, and role owner.
