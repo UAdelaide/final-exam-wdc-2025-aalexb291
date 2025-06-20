@@ -40,7 +40,7 @@ let db;
     let query =`SELECT * From Users;`;
     connection.query(query, (err, results) => {
         if (err) return res.status(500);
-        res.json(results);
+        console.log()
     });
 
   } catch (err) {
