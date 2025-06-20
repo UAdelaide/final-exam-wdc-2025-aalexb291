@@ -93,7 +93,7 @@ router.get('/walkrequests/open', async (req, res) => {
     }
 });
 
-router.get('/walkers/open', async (req, res) => {
+router.get('/walkers/summary', async (req, res) => {
     try {
         const query = `
             SELECT WalkRequests.request_id, Dogs.name, WalkRequests.requested_time, WalkRequests.duration_minutes, WalkRequests.location, Users.username
@@ -107,7 +107,7 @@ router.get('/walkers/open', async (req, res) => {
         res.json(result);
     } catch (error) {
         console.error(error);
-        res.status(500).json({ error: 'Failed to fetch walk requests' });
+        res.status(500).json({ error: 'Failed to fetch walker summary' });
     }
 });
 
