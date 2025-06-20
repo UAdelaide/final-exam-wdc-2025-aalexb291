@@ -65,15 +65,19 @@ router.get('/', function(req, res, next) {
 // using mysql2/promise as that is what was used in starthere/app.js
 
 router.get('/dogs', async (req, res) => {
-    
-    const query = `
-        SELECT Dogs.name, Dogs.size, Users.username
-        FROM Dogs
-        JOIN Users ON Dogs.owner_id = Users.user_id;
-    `;
+    try {
+        const query = `
+            SELECT Dogs.name, Dogs.size, Users.username
+            FROM Dogs
+            JOIN Users ON Dogs.owner_id = Users.user_id;
+        `;
 
-    const result = await connection.query(query);
-    res.json(result);
+        const result = await connection.query(query);
+        res.json(result);
+    } catch {
+        res.st
+    }
+
 });
 
 module.exports = router;
