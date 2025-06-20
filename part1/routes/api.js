@@ -4,6 +4,8 @@ var mysql = require('mysql2/promise');
 var fs = require('fs');
 var path = require('path');
 
+router.use(express.json());
+
 // Locations of SQL query files
 var dogwalks = path.join(__dirname, '..', 'database', 'dogwalks.sql');
 var createQuery = fs.readFileSync(dogwalks, 'utf8');
