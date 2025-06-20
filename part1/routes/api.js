@@ -7,7 +7,8 @@ var path = require('path');
 var dogwalks = path.join(__dirname, '..', 'database', 'dogwalks.sql');
 var createQuery = fs.readFile(dogwalks, 'utf8');
 
-var inserts = path.join(__dirname, '..', 'database', 'dogwalks.sql');
+var inserts = path.join(__dirname, '..', 'database', 'insertqueries.sql');
+var insertQuery = fs.readFile(inserts)
 
 let db;
 
