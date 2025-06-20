@@ -22,6 +22,7 @@ VALUES
 ((SELECT dog_id FROM Dogs WHERE name='Kevin'), '2025-06-08 11:00:00', 50, 'Kosciuszko', 'cancelled'),
 ((SELECT dog_id FROM Dogs WHERE name='Steve'), '2025-06-12 10:00:00', 30, 'Henley Beach', 'open');
 
+-- hardcoded rating for testing /api/walkers/summary
 INSERT INTO WalkRatings (request_id, walker_id, owner_id, rating, comments)
 VALUES
 (3, 2, 3, 5, 'Lovely and prompt!');
