@@ -13,7 +13,10 @@ var insertQuery = fs.readFileSync(inserts, 'utf8');
 
 let db;
 
-// Adapted code snippet from /starthere/app.js
+/* Adapted code snippet from /starthere/app.js
+    Simply runs both SQL query files in /database
+    This satisfies 
+*/
 (async () => {
   try {
     const connection = await mysql.createConnection({
