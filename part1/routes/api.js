@@ -7,5 +7,9 @@ var connection = mysql.createConnection({
   database: 'DogWalkService'
 });
 
-connection.connect();
+connection.connect((err) => {
+  if (err) throw err;
+});
+
+
 
