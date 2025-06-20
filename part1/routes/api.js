@@ -20,7 +20,7 @@ let db;
       password: ''
     });
 
-    // Delete existing DB, then re-create it based on dogwalks.sql
+    // Delete existing DB, then re-create it based on /database/dogwalks.sql
     // This includes creating all tables
     await connection.query(createQuery);
     await connection.end();
@@ -33,7 +33,7 @@ let db;
       database: 'DogWalkService'
     });
 
-    // Insert all test data from insertqueries.sql
+    // Insert all test data from /database/insertqueries.sql
     await db.query(insertQuery);
   } catch (err) {
     console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
