@@ -7,6 +7,8 @@ var path = require('path');
 var dogwalks = path.join(__dirname, '..', 'database', 'dogwalks.sql');
 var createQuery = fs.readFile(dogwalks, 'utf8');
 
+var inserts = path.join(__dirname, '..', 'database', 'dogwalks.sql');
+
 let db;
 
 (async () => {
@@ -30,16 +32,7 @@ let db;
       database: 'DogWalkService'
     });
 
-    // Insert data if table is empty
-    const [rows] = await db.execute('SELECT COUNT(*) AS count FROM books');
-    if (rows[0].count === 0) {
-      await db.execute(`
-        INSERT INTO books (title, author) VALUES
-        ('1984', 'George Orwell'),
-        ('To Kill a Mockingbird', 'Harper Lee'),
-        ('Brave New World', 'Aldous Huxley')
-      `);
-    }
+    // Insert all test data from insertqueries.sql
   } catch (err) {
     console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
   }
