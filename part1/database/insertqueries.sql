@@ -9,16 +9,20 @@ VALUES
 
 INSERT INTO Dogs (owner_id, name, size)
 VALUES
-((SELECT user_id from Users where username='alice123'), 'Max', 'medium'),
+((SELECT user_id from Users WHERE username='alice123'), 'Max', 'medium'),
 ((SELECT user_id from Users where username='carol123'), 'Bella', 'small'),
 ((SELECT user_id from Users where username='carol123'), 'Foxy', 'large'),
 ((SELECT user_id from Users where username='alexb'), 'Kevin', 'small'),
 ((SELECT user_id from Users where username='alexb'), 'Steve', 'medium');
 
+INSERT INTO
+
 
 /*
-    A dog named Max, who is medium-sized and owned by alice123.
-    A dog named Bella, who is small and owned by carol123.
-    Three more dogs with details of your choosing.
+
+    A request for Max at 2025-06-10 08:00:00 for 30 minutes at Parklands, with status open.
+    A request for Bella at 2025-06-10 09:30:00 for 45 minutes at Beachside Ave, with status accepted.
+    Three more walk requests with details of your choosing.
+
 
 */
