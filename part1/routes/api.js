@@ -74,8 +74,8 @@ router.get('/dogs', async (req, res) => {
 
         const result = await connection.query(query);
         res.json(result);
-    } catch {
-        res.st
+    } catch (error) {
+        res.status(500);
     }
 
 });
