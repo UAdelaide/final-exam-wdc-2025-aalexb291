@@ -4,6 +4,7 @@ var mysql = require('mysql');
 var fs = require('fs');
 var path = require('path');
 
+// Locations of SQL query files
 var dogwalks = path.join(__dirname, '..', 'database', 'dogwalks.sql');
 var createQuery = fs.readFile(dogwalks, 'utf8');
 
