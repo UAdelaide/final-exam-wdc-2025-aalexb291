@@ -22,22 +22,13 @@ let db;
     await connection.query(createQuery);
     await connection.end();
 
-    // Connect to the 
+    // Connect to the DogWalkService
     db = await mysql.createConnection({
       host: 'localhost',
       user: 'root',
       password: '',
       database: 'DogWalkService'
     });
-
-    // Create tables
-    await db.execute(`
-      CREATE TABLE IF NOT EXISTS books (
-        id INT AUTO_INCREMENT PRIMARY KEY,
-        title VARCHAR(255),
-        author VARCHAR(255)
-      )
-    `);
 
     // Insert data if table is empty
     const [rows] = await db.execute('SELECT COUNT(*) AS count FROM books');
