@@ -8,6 +8,7 @@ VALUES
 ('alexb', 'alexb@example.com', 'hashed0456', 'owner');
 
 INSERT INTO Dogs (owner_id, name, size)
+VALUES
 
 
 /*
