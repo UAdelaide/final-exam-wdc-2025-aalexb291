@@ -11,5 +11,7 @@ connection.connect((err) => {
   if (err) throw err;
 });
 
-
+router.get('/', function(req, res, next) {
+  res.status(200).send('Success');
+});
 
