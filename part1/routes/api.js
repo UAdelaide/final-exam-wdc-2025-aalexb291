@@ -38,10 +38,10 @@ let db;
     await db.query(insertQuery);
 
     let query =`SELECT * From Users;`;
-    connection.query(sql, (err, results) => {
-    if (err) return res.status(500);
-    res.json(results);
-  });
+    connection.query(query, (err, results) => {
+        if (err) return res.status(500);
+        res.json(results);
+    });
 
   } catch (err) {
     console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
