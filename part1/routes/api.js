@@ -11,7 +11,7 @@ var createQuery = fs.readFileSync(dogwalks, 'utf8');
 var inserts = path.join(__dirname, '..', 'database', 'insertqueries.sql');
 var insertQuery = fs.readFileSync(inserts, 'utf8');
 
-const db;
+let db;
 
 /*  Adapted code snippet from /starthere/app.js
     Simply runs both SQL query files in /database
@@ -67,7 +67,7 @@ router.get('/dogs', async (req, res) => {
             JOIN Users ON Dogs.owner_id = Users.user_id;
         `;
 
-        const [result] = await connection.query(query);
+        const [result] = await db.query(query);
         res.json(result);
     } catch (error) {
         console.error(error);
