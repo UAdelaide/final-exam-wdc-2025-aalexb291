@@ -71,6 +71,9 @@ router.get('/dogs', async (req, res) => {
         FROM Dogs
         JOIN Users ON Dogs.owner_id = Users.user_id;
     `;
+
+    const result = await connection.query(query);
+    
 });
 
 module.exports = router;
