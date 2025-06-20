@@ -43,7 +43,7 @@ let db;
     await db.query(insertQuery);
 
     let query =`SELECT * From Users;`;
-    db.query(query, (err, results) => {
+    await db.query(query, (err, results) => {
         if (err) return res.status(500);
         console.log(JSON.stringify(results));
     });
