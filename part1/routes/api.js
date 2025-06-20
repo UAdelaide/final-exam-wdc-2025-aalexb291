@@ -12,7 +12,7 @@ let db;
       password: ''
     });
 
-    // Create the database if it doesn't exist
+    // Delete existing DB, then re-create it based on dogwalks.sql
     await connection.query('CREATE DATABASE IF NOT EXISTS testdb');
     await connection.end();
 
