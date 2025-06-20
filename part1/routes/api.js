@@ -26,7 +26,7 @@ let db;
     await connection.query(createQuery);
     await connection.end();
 
-    // Connect to the DogWalkService
+    // Connect to the DogWalkService db
     db = await mysql.createConnection({
       host: 'localhost',
       user: 'root',
@@ -36,7 +36,7 @@ let db;
 
     // Insert all test data from /database/insertqueries.sql
     await db.query(insertQuery);
-    
+
   } catch (err) {
     console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
   }
