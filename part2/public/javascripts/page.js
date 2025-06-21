@@ -212,7 +212,7 @@ function logout(){
         if (this.readyState === 4 && this.status === 200) {
             // small change to just show username
             var data = JSON.parse(this.responseText);
-            alert("Welcome " + data.user);
+            alert(data.user);
             // redirected to relevant owner or walker page
             window.location.href = data.redirect;
         } else if (this.readyState === 4 && this.status >= 400) {
