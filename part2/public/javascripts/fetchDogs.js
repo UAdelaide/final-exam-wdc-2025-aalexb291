@@ -19,7 +19,7 @@ createApp({
                 const response = await fetch('/users/dogs');
                 if (response.ok) {
                     const data = await response.json();
-                    this.dogs = data.dogs;
+                    this.names = data.names;
                 }
             } catch (error) {
                 console.error(error);
