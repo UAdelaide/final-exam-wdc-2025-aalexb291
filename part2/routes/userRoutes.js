@@ -114,7 +114,7 @@ router.get('/dogs', async (req, res) => {
       return res.status(400).json({ error: 'No dogs found' });
     }
 
-    res.json({ message: rows[0] });
+    res.json({ status: 'success', dogs: rows });
   } catch (error) {
     res.status(500).json({ error: 'Dog retrieval failed' });
   }
