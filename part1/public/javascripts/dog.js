@@ -6,7 +6,8 @@ createApp({
 
     data() {
         return {
-            imageSrc: ''
+            imageSrc: '',
+            loading: false
         };
     },
 
