@@ -131,7 +131,7 @@ function createPost(){
 
     // Define function to run on response
     xmlhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
+        if (this.readyState === 4 && this.status === 200) {
             // Update the page on success
             loadPosts();
             showMain();
@@ -160,7 +160,7 @@ function searchPosts(){
  * Increase the votes for a given post, then update the page
  */
 function upvote(index) {
-    posts[index].upvotes ++;
+    posts[index].upvotes++;
     updatePosts();
 }
 
@@ -168,7 +168,7 @@ function upvote(index) {
  * Decrease the votes for a given post, then update the page
  */
 function downvote(index) {
-    posts[index].upvotes --;
+    posts[index].upvotes--;
     updatePosts();
 }
 
