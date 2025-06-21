@@ -174,6 +174,7 @@ function downvote(index) {
 
 
 function login(){
+    // changed variable names to match db fields
     let user = {
         username: document.getElementById('username').value,
         password_hash: document.getElementById('password').value
