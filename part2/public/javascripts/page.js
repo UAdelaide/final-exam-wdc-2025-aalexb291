@@ -213,7 +213,7 @@ function logout(){
             // show success response from server
             var data = JSON.parse(this.responseText);
             alert(data.message);
-            // redirected to relevant owner or walker page
+            // redirected to home page after logout
             window.location.href = data.redirect;
         } else if (this.readyState === 4 && this.status >= 400) {
             alert("Logout failed");
