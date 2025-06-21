@@ -96,14 +96,14 @@ router.get('/dogs', async (req, res) => {
     return res.status(400).json({ error: 'User not an owner' });
   }
 
-  const userid = req.session.user_id;
+  const owner_id = req.session.user_id;
 
   // code adapted from /login route
     try {
     const [rows] = await db.query(`
       SELECT name FROM Dogs
       WHERE owner_id = ?
-    `, [username, password_hash]);
+    `, [owner_id]);
 
     if (rows.length === 0) {
       return res.status(401).json({ error: 'Invalid credentials' });
