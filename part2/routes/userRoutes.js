@@ -106,7 +106,7 @@ router.get('/dogs', async (req, res) => {
     `, [owner_id]);
 
     if (rows.length === 0) {
-      return res.status(401).json({ error: 'Invalid credentials' });
+      return res.status(401).json({ error: 'No dogs found' });
     }
 
     // added express-session cookie building
