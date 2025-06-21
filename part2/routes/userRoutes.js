@@ -93,7 +93,7 @@ router.get('/logout', async (req, res) => {
 router.get('/dogs', async (req, res) => {
   // if you aren't an owner, you don't need this route.
   if (req.session.role != 'owner') {
-    return res.status(400).json({ error: 'User not an owner' });
+    return res.status(403).json({ error: 'User not an owner' });
   }
 
   const owner_id = req.session.user_id;
@@ -111,7 +111,7 @@ router.get('/dogs', async (req, res) => {
 
     res.json({ message: rows[0] });
   } catch (error) {
-    res.status(500).json({ error: 'Login failed' });
+    res.status(500).json({ error: 'Dog retrieval failed' });
   }
 
 });
