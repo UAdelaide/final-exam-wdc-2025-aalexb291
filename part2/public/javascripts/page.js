@@ -190,7 +190,7 @@ function login(){
     })
     .then((response) => {
         if (response.ok) {
-            return response;
+            return response.json();
         }
         throw new Error('Login failed');
     })
