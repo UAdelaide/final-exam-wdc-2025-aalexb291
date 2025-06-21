@@ -70,7 +70,7 @@ router.post('/login', async (req, res) => {
   }
 });
 
-// Simple logout route
+// Simple logout route using GET - don't need to provide any data for this.
 router.get('/logout', async (req, res) => {
   // if you aren't logged in, reject
   if (!req.session.user_id) {
