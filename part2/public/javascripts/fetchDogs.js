@@ -12,6 +12,11 @@ createApp({
         };
     },
 
+    // waits until #dog is mounted to run fetchDogImage
+    async mounted() {
+        await this.fetchDogImage();
+    },
+
     methods: {
         async fetchDogs() {
             try {
