@@ -24,6 +24,8 @@ createApp({
                 this.imageSrc = data.message;
             } catch (error) {
                 console.error(error);
+            } finally {
+                this.loading = false;
             }
         }
     }
