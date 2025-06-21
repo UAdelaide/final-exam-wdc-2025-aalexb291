@@ -17,7 +17,7 @@ createApp({
     methods: {
         async fetchDogImage() {
             try {
-                const response = await fetch("https://dog.ceo/api/breeds/image/random");
+                const response = await fetch('https://dog.ceo/api/breeds/image/random');
                 const data = await response.json();
                 this.imageSrc = data.message;
             } catch (error) {
@@ -26,4 +26,4 @@ createApp({
         }
     }
 
-})
+}).mount('#dog');
