@@ -109,9 +109,7 @@ router.get('/dogs', async (req, res) => {
       return res.status(401).json({ error: 'No dogs found' });
     }
 
-    
-
-    res.json({ message: 'Login successful', user: rows[0].username, redirect: dashboard });
+    res.json({ message: rows[0] });
   } catch (error) {
     res.status(500).json({ error: 'Login failed' });
   }
