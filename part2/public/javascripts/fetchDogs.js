@@ -9,22 +9,17 @@ createApp({
             // these variables are used for v-for
             //
             names: [],
-            selected: false
+            selected: ''
         };
     },
 
     methods: {
-        async fetchDogImage() {
+        async fetchDogs() {
             try {
-                // loading is true until dog retrieved
-                this.loading = true;
-                const response = await fetch('https://dog.ceo/api/breeds/image/random');
-                const data = await response.json();
+);
                 this.imageSrc = data.message;
             } catch (error) {
                 console.error(error);
-            } finally {
-                this.loading = false;
             }
         }
     }
