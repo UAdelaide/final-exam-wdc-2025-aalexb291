@@ -96,6 +96,35 @@ router.get('/dogs', async (req, res) => {
     return res.status(400).json({ error: 'User not an owner' });
   }
 
+  // code adapted from /login route
+    try {
+    const [rows] = await db.query(`
+      SELECT user_id, username, role FROM Users
+      WHERE username = ? AND password_hash = ?
+    `, [username, password_hash]);
+
+    if (rows.length === 0) {
+      return res.status(401).json({ error: 'Invalid credentials' });
+    }
+
+    // added express-session cookie building
+    req.session.user_id = rows[0].user_id;
+    req.session.username = rows[0].username;
+    req.session.role = rows[0].role;
+
+    // redirect url returned for window.location.href call in page.js
+    let dashboard;
+
+    if (rows[0].role === 'owner') {
+      dashboard = '/owner-dashboard.html';
+    } else {
+      dashboard = '/walker-dashboard.html';
+    }
+
+    res.json({ message: 'Login successful', user: rows[0].username, redirect: dashboard });
+  } catch (error) {
+    res.status(500).json({ error: 'Login failed' });
+  }
 
 });
 
