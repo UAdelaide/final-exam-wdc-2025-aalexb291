@@ -174,8 +174,6 @@ function downvote(index) {
 
 
 function login(){
-
-    console.log("HI");
     let user = {
         username: document.getElementById('username').value,
         password_hash: document.getElementById('password').value
