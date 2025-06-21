@@ -182,7 +182,10 @@ function login(){
 
     // Create AJAX Request
     fetch("/users/login", {
-        
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
     })
 
 }
