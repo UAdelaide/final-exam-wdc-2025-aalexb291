@@ -70,7 +70,7 @@ footer h4 {
     font-weight: normal;
 }
 
-.date
+.post .date {
     float: right;
 }
 
