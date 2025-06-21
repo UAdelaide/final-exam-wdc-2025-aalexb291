@@ -20,7 +20,7 @@ app.use(express.static(path.join(__dirname, '/public')));
 const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
 
-app.use('/walks', walkRoutes);
+app.use('api/walks', walkRoutes);
 app.use('/users', userRoutes); // route changed to just /users for more consistency with existing AJAX requests
 
 // Export the app instead of listening here
