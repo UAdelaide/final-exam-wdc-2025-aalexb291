@@ -22,6 +22,8 @@ createApp({
                 if (response.ok) {
                     const data = await response.json();
                     this.names = data.names;
+                } else {
+                    console.error('Fetch failed');
                 }
             } catch (error) {
                 console.error(error);
