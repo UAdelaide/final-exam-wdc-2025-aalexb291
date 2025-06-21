@@ -91,8 +91,9 @@ router.get('/logout', async (req, res) => {
 });
 
 router.get('/dogs', async (req, res) => {
+  // if you aren't logged in, deny
   if (!req.session.user_id) {
-    return res.status(400).json({ error: 'Not loggged in', redirect: '/' });
+    return res.status(401).json({ error: 'Not loggged in' });
   }
 
   // if you aren't an owner, you don't need this route.
