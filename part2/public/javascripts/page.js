@@ -185,13 +185,13 @@ function login(){
 
     // Define function to run on response
     xmlhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
+        if (this.readyState === 4 && this.status === 200) {
             // small change to just show username
             var data = JSON.parse(this.responseText);
             alert("Welcome " + data.user);
             // redirected to relevant owner or walker page
             window.location.href = data.redirect;
-        } else if (this.readyState == 4 && this.status >= 400) {
+        } else if (this.readyState === 4 && this.status >= 400) {
             alert("Login failed");
         }
     };
@@ -207,6 +207,18 @@ function logout(){
 
     // Create AJAX Request
     var xmlhttp = new XMLHttpRequest();
+
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState === 4 && this.status === 200) {
+            // small change to just show username
+            var data = JSON.parse(this.responseText);
+            alert("Welcome " + data.user);
+            // redirected to relevant owner or walker page
+            window.location.href = data.redirect;
+        } else if (this.readyState === 4 && this.status >= 400) {
+            alert("Login failed");
+        }
+    };
 
     // Open connection to server & send the post data using a POST request
     xmlhttp.open("POST", "/users/logout", true);
