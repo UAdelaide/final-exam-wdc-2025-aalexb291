@@ -8,8 +8,12 @@ createApp({
         return {
             imageSrc: ''
         };
-    }
+    },
 
-    methods:
+    methods: {
+        fetchDogImage() {
+            
+        }
+    }
 
 })
