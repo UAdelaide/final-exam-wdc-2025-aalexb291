@@ -61,7 +61,7 @@ router.post('/login', async (req, res) => {
       redirect = 'walker-dashboard.html';
     }
 
-    res.json({ message: 'Login successful', user: rows[0].username });
+    res.json({ message: 'Login successful', user: rows[0].username, redirect: redirect });
   } catch (error) {
     res.status(500).json({ error: 'Login failed' });
   }
