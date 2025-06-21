@@ -50,10 +50,12 @@ router.post('/login', async (req, res) => {
       return res.status(401).json({ error: 'Invalid credentials' });
     }
 
+    // added express-session cookie building
     req.session.user_id = rows[0].user_id;
     req.session.username = rows[0].username;
     req.session.role = rows[0].role;
 
+    // redirect url returned for window.href
     let dashboard;
 
     if (rows[0].role === 'owner') {
