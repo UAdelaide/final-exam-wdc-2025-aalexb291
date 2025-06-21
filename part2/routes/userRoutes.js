@@ -37,6 +37,7 @@ router.get('/me', (req, res) => {
 
 // POST login (dummy version)
 router.post('/login', async (req, res) => {
+  // changed variable names to match db fields
   const { username, password_hash } = req.body;
 
   try {
