@@ -211,12 +211,13 @@ function logout(){
     xmlhttp.onreadystatechange = function() {
         if (this.readyState === 4 && this.status === 200) {
             // show success response from server
-            var data = JSON.parse(this.responseText);
+            let data = JSON.parse(this.responseText);
             alert(data.message);
             // redirected to home page after logout
             window.location.href = data.redirect;
         } else if (this.readyState === 4 && this.status >= 400) {
-            alert("Logout failed: " + data);
+            let data = JSON.parse(this.responseText);
+            alert("Logout failed: " + data.message);
         }
     };
 
