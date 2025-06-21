@@ -210,7 +210,7 @@ function logout(){
 
     xmlhttp.onreadystatechange = function() {
         if (this.readyState === 4 && this.status === 200) {
-            // small change to just show username
+            // show success response from server
             var data = JSON.parse(this.responseText);
             alert(data.message);
             // redirected to relevant owner or walker page
