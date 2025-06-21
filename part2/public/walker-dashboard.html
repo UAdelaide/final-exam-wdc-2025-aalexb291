@@ -74,11 +74,12 @@
             }
         }
 
+        // parameter requestID removed, no longer required
         async function applyToWalk() {
           // call new getCurrentUser() function above to get the requestID
           const requestID = getCurrentUser();
           try {
-            // small change to the AJAX request to use the requestID
+            // small change to the AJAX request to use the requestID const above
             const res = await fetch(`/api/walks/${requestID}/apply`, {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
