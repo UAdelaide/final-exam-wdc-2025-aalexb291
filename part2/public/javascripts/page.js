@@ -192,6 +192,12 @@ function login(){
             return response.json();
         }
         throw new Error('Login failed');
+    })
+    .then((data) => {
+        alert("Welcome " + data.user);
+    })
+    .catch((error) => {
+        alert("Login failed");
     });
 
 }
