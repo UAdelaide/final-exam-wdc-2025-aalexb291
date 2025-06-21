@@ -8,6 +8,8 @@ createApp({
         return {
             imageSrc: ''
         };
-    },
+    }
+
+    methods:
 
 })
