@@ -61,17 +61,6 @@ function createPost(){
 }
 
 /*
- * Updates the search term then reloads the posts shown
- */
-function searchPosts(){
-
-    search = document.getElementById('post-search').value.toUpperCase();
-    updatePosts();
-
-}
-
-
-/*
  * Reloads the posts shown on the page
  * Iterates over the array of post objects, rendering HTML for each and appending it to the page
  * If a search term is being used
@@ -124,6 +113,16 @@ function updatePosts() {
 
     }
 
+
+}
+
+/*
+ * Updates the search term then reloads the posts shown
+ */
+function searchPosts(){
+
+    search = document.getElementById('post-search').value.toUpperCase();
+    updatePosts();
 
 }
 
