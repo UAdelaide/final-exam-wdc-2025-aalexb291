@@ -188,9 +188,11 @@ function login(){
         },
         body: JSON.stringify(user)
     })
-    .then(response => {
+    .then((response) => {
         if (response.ok) {
             return response;
+        } else {
+            throw new Error('Login failed');
         }
     })
 
