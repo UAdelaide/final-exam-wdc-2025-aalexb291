@@ -14,6 +14,7 @@ createApp({
 
     // waits until #app is mounted to run fetchDogs
     async mounted() {
+        console.log('Vue mounted!');
         await this.fetchDogs();
     },
 
