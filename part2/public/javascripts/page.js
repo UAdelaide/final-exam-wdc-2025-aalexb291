@@ -181,9 +181,9 @@ function login(){
     };
 
     // Create AJAX Request
-    try {
-        const response = await fetch("/users/login", )
-    }
+    fetch("/users/login", {
+        
+    })
 
 }
 
