@@ -91,7 +91,7 @@ router.get('/logout', async (req, res) => {
 });
 
 router.get('/dogs', async (req, res) => {
-  
+  // if you aren't an owner, you don't need this route.
   if (req.session.role != 'owner') {
     return res.status(400).json({ error: 'User not an owner' });
   }
