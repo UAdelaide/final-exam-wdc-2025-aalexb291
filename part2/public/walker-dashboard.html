@@ -64,7 +64,8 @@
             if (res.ok) {
               throw new Error('Failed to get walk requests');
             }
-            c
+            const userID = await res.json();
+            return userID;
             } catch (error) {
               console.error(error);
 
