@@ -21,7 +21,7 @@ const walkRoutes = require('./routes/walkRoutes');
 const userRoutes = require('./routes/userRoutes');
 
 app.use('/walks', walkRoutes);
-app.use('/users', userRoutes);
+app.use('/users', userRoutes); // route changed to just /users for more consistency with existing AJAX requests
 
 // Export the app instead of listening here
 module.exports = app;
