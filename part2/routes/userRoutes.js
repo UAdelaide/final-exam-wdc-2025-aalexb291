@@ -96,10 +96,12 @@ router.get('/dogs', async (req, res) => {
     return res.status(400).json({ error: 'User not an owner' });
   }
 
+  const userid = req.session.user_id;
+
   // code adapted from /login route
     try {
     const [rows] = await db.query(`
-      SELECT user_id, username, role FROM Users
+      SELECT name FROM Dogs
       WHERE username = ? AND password_hash = ?
     `, [username, password_hash]);
 
