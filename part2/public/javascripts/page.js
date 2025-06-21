@@ -199,7 +199,7 @@ function login(){
     })
     .catch((error) => {
         alert("Login failed");
-    })
+    });
 
 }
 
