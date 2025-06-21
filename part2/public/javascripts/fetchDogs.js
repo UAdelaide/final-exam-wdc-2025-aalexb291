@@ -6,7 +6,7 @@ createApp({
 
     data() {
         return {
-            // these variables are used for v-for
+            // this variable is used for v-for
             // names array stores dog names
             names: []
         };
