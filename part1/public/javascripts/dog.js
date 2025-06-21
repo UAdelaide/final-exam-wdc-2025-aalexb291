@@ -7,7 +7,8 @@ createApp({
     data() {
         return {
             // these variables are used for v-if
-            // 
+            // loading just shows 'Loading...' text if true, otherwise image if false
+            // imageSrc is the url provided by the dog api
             imageSrc: '',
             loading: false
         };
