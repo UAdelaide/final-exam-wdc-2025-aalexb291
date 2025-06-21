@@ -64,6 +64,8 @@
             if (res.ok) {
               throw new Error('Failed to get walk requests');
             }
+            const data = await res.json();
+            return 
             } catch (error) {
               console.error(error);
 
