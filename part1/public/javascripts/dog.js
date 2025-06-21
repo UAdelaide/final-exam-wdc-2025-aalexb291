@@ -13,7 +13,7 @@ createApp({
     methods: {
         async fetchDogImage() {
             try {
-                response = await fetch(https://dog.ceo/api/breeds/image/random)
+                response = await fetch("https://dog.ceo/api/breeds/image/random");
             } catch (error) {
                 console.error(error);
             }
