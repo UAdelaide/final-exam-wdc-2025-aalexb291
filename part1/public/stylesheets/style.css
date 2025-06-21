@@ -20,9 +20,9 @@ p {
 }
 
 button {
-  
+  text-align: right;
 }
 
 .image-container {
-  text-align: center;
+  text-align: left;
 }
