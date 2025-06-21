@@ -91,7 +91,9 @@ router.get('/logout', async (req, res) => {
 });
 
 router.get('/dogs', async (req, res) => {
-  if (req.session.role != 'owner')
+  if (req.session.role != 'owner') {
+    return res.status(400).json({ error: 'User not an owner', redirect: '/' });
+  }
 });
 
 module.exports = router;
