@@ -13,7 +13,7 @@ createApp({
     methods: {
         fetchDogImage() {
             try {
-
+                response = 
             } catch (error) {
                 console.error(error);
             }
