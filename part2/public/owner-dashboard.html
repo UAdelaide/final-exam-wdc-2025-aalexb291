@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="/stylesheets/style.css">
   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
   <script src="/javascripts/page.js"></script>
-  <script src="/javascripts/fetchDogs.js"></script>
 </head>
 <body class="bg-light">
   <div id="app" class="container py-4">
@@ -91,7 +90,7 @@
 
         const dogNAmes = ref([]); // this is for fetching dog names for form above
 
-        
+        // vue script for fetching dog names from /users/dogs route
         async function fetchDogs() {
           try {
               // receive simple JSON
