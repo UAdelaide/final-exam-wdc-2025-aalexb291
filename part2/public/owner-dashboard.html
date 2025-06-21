@@ -91,6 +91,21 @@
 
         const dogNAmes = ref([]); // this is for fetching dog names for form above
 
+        async function fetchDogs() {
+            try {
+                // receive simple JSON
+                const response = await fetch('/users/dogs');
+                if (response.ok) {
+                    const data = await response.json();
+                    this.dogNames = data.dogs;
+                } else {
+                    console.error('Fetch failed');
+                }
+            } catch (error) {
+                console.error(error);
+            }
+        }
+
         async function loadWalks() {
           try {
             const res = await fetch('/api/walks');
