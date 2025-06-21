@@ -89,6 +89,8 @@
         const message = ref('');
         const error = ref('');
 
+        const dogNAmes = ref([]); // this is for fetching dog names for form above
+
         async function loadWalks() {
           try {
             const res = await fetch('/api/walks');
