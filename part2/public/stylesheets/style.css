@@ -74,6 +74,13 @@ footer h4 {
     float: right;
 }
 
+.login-form label,
+.login-form input,
+.login-form button {
+  display: block;
+  margin-bottom: 10px;
+}
+
 .tag {
     background-color: rgb(225, 236, 244);
     color: rgb(57, 115, 157);
