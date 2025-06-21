@@ -65,6 +65,7 @@
             if (res.ok) {
               throw new Error('Failed to get walk requests');
             }
+            // it's just a single value so we can return the result directly
             const userID = await res.json();
             return userID;
             } catch (error) {
