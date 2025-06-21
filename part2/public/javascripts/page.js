@@ -197,7 +197,7 @@ function login(){
         alert("Welcome " + data.user);
     })
     .catch((error) => {
-        alert("Login failed");
+        alert("Login failed: " error);
     });
 
 }
