@@ -23,6 +23,7 @@ button {
   float: right;
   color:rgb(49, 49, 49);
   background-color: rgb(109, 107, 107);
+  border: none;
 }
 
 .image-container {
