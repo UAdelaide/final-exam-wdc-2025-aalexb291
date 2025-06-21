@@ -58,6 +58,7 @@
           }
         }
 
+        // fetches the current req.session.userid from users/me route
         async function getCurrentUser() {
           try {
             const res = await fetch('/users/me');
