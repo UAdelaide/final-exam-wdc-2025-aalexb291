@@ -76,7 +76,9 @@ router.post('/logout', async (req, res) => {
       console.error('Could not destroy sesion cookie: ', err);
       return res.status(500).json({ error: 'Logout failed' });
     }
-  })
+
+    res.clearCookie('sessionCookie');
+  });
 });
 
 module.exports = router;
