@@ -10,6 +10,10 @@ createApp({
         };
     },
 
+    async mounted() {
+        
+    }
+
     methods: {
         async fetchDogImage() {
             try {
