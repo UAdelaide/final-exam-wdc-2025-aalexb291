@@ -17,7 +17,10 @@ createApp({
         async fetchDogs() {
             try {
                 const response = await fetch('/users/dogs');
-                
+                if (response.ok) {
+                    const data = await response.json();
+                    this.
+                }
             } catch (error) {
                 console.error(error);
             }
