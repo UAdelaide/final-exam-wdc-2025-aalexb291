@@ -143,9 +143,11 @@
 
         onMounted(() => {
           loadWalks();
+          fetchDogs(); // added fetchDogs() to populate list
         });
 
         return {
+          dogNames, // dog names array
           form,
           walks,
           message,
