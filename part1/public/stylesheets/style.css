@@ -8,7 +8,11 @@ a {
 }
 
 body {
-  background-color: ;
+  background-color: black;
+}
+
+h1 {
+  color:darkgray
 }
 
 .image-container {
