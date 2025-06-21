@@ -72,7 +72,9 @@ router.post('/login', async (req, res) => {
 
 router.post('/logout', async (req, res) => {
   req.session.destroy((err) = > {
-    
+    if (err) {
+      console.error('Could not destroy sesion cookie: ')
+    }
   })
 });
 
