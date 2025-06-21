@@ -216,8 +216,8 @@ function logout(){
             // redirected to home page after logout
             window.location.href = data.redirect;
         } else if (this.readyState === 4 && this.status >= 400) {
-            let data = JSON.parse(this.responseText);
-            alert("Logout failed: " + );
+            let error = JSON.parse(this.responseText);
+            alert("Logout failed: " + error.error);
         }
     };
 
