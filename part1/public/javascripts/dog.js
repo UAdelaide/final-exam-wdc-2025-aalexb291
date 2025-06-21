@@ -22,6 +22,7 @@ createApp({
     methods: {
         async fetchDogImage() {
             try {
+                // loading is true until dog retrieved
                 this.loading = true;
                 const response = await fetch('https://dog.ceo/api/breeds/image/random');
                 const data = await response.json();
