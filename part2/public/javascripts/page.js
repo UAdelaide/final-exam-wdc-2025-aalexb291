@@ -179,27 +179,24 @@ function login(){
         password_hash: document.getElementById('password').value
     };
 
-    // Make AJAX Request using Fetch
-    fetch("/users/login", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(user)
-    })
-    .then((response) => {
-        if (response.ok) {
-            return response.json();
+    // Create AJAX Request
+    var xmlhttp = new XMLHttpRequest();
+
+    // Define function to run on response
+    xmlhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var data = JSON.parse(this.responseText);
+            alert("Welcome " + data.user);
+            window.location.href = data.redirect;
+        } else if (this.readyState == 4 && this.status >= 400) {
+            alert("Login failed");
         }
-        throw new Error('Login failed');
-    })
-    .then((data) => {
-        alert("Welcome " + data.user);
-        window.location.href = data.redirect;
-    })
-    .catch((error) => {
-        alert("Login failed: " + error);
-    });
+    };
+
+// Open connection to server & send the post data using a POST request
+xmlhttp.open("POST", "/users/login", true);
+xmlhttp.setRequestHeader("Content-type", "application/json");
+xmlhttp.send(JSON.stringify(user));
 
 }
 
