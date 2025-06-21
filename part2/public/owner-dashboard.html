@@ -25,8 +25,8 @@
             <label class="form-label">Select Your Dog</label>
             <select>
               <option value="" disabled selected>-- Choose a dog --</option>
-              <option v-for="name in names" :key="name.name" :value="name.name">
-                {{ name.name }}
+              <option v-for="dog in names" :key="dog.name" :value="dog.name">
+                {{ dog.name }}
               </option>
             </select>
           </div>
