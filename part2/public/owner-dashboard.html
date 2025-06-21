@@ -23,7 +23,7 @@
         <form @submit.prevent="submitWalkRequest">
           <div class="mb-3">
             <label class="form-label">Select Your Dog</label>
-            <!-- This uses v-for and fetchDogs() function defined below in Vue component to retrieve dog names -->
+            <!-- This uses v-for and fetchDogs() function defined below in Vue script to retrieve dog names -->
             <select>
               <option value="" disabled selected>-- Choose a dog --</option>
               <option v-for="dog in dogNames" :key="dog.name" :value="dog.name">
