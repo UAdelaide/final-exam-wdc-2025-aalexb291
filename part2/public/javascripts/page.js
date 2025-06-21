@@ -44,8 +44,8 @@ function updatePosts() {
         // Check if a search term used.
         if(search !== null){
             // If so, skip this question/post if title or content doesn't match
-            if (post.title.toUpperCase().indexOf(search) < 0 &&
-                post.content.toUpperCase().indexOf(search) < 0 ) {
+            if (post.title.toUpperCase().indexOf(search) < 0
+                && post.content.toUpperCase().indexOf(search) < 0) {
                 continue;
             }
         }
