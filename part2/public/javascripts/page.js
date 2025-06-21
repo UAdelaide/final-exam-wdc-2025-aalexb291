@@ -185,7 +185,7 @@ function login(){
     // Define function to run on response
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            // small change 
+            // small change to just show username
             var data = JSON.parse(this.responseText);
             alert("Welcome " + data.user);
             window.location.href = data.redirect;
