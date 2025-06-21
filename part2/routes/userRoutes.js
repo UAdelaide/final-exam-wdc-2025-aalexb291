@@ -56,7 +56,7 @@ router.post('/login', async (req, res) => {
     let redirect;
 
     if (rows[0].role === 'owner') {
-      redirect = '
+      redirect = 'owner-dashboard.html'
     }
 
     res.json({ message: 'Login successful', user: rows[0].username });
