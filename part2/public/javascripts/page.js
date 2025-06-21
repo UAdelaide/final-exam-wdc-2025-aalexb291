@@ -27,7 +27,8 @@ function showMain(){
 }
 
 /*
- * Creates a new question/post & send it to the server, before triggering an update for the main part of the page.
+ * Creates a new question/post & send it to the server
+    before triggering an update for the main part of the page.
  */
 function createPost(){
 
