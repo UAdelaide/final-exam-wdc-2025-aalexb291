@@ -90,14 +90,14 @@
 
         const dogNAmes = ref([]); // this is for fetching dog names for form above
 
-        // vue script for fetching dog names from /users/dogs route
+        // function for fetching dog names from /users/dogs route
         async function fetchDogs() {
           try {
               // receive simple JSON
               const response = await fetch('/users/dogs');
               if (response.ok) {
                   const data = await response.json();
-                  this.dogNames = data.dogs;
+                  dogNames.value = data.dogs;
               } else {
                   console.error('Fetch failed');
               }
