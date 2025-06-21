@@ -12,7 +12,11 @@ createApp({
 
     methods: {
         fetchDogImage() {
-            
+            try {
+
+            } catch (error) {
+                
+            }
         }
     }
 
