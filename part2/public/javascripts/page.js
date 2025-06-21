@@ -195,7 +195,7 @@ function login(){
         throw new Error('Login failed');
     })
     .then((data) => {
-        alert("Welcome " + data);
+        alert("Welcome " + data.user);
     })
     .catch((error) => {
         alert("Login failed");
