@@ -86,7 +86,6 @@ router.get('/logout', async (req, res) => {
 
     // Clear session cookie
     res.clearCookie('sessionCookie');
-
     res.json({ message: 'Logged out successfully', redirect: '/' });
   });
 });
