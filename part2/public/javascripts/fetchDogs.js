@@ -16,8 +16,8 @@ createApp({
     methods: {
         async fetchDogs() {
             try {
-);
-                this.imageSrc = data.message;
+                const response = await fetch('/users/dogs');
+                
             } catch (error) {
                 console.error(error);
             }
