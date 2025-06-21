@@ -71,7 +71,7 @@ router.post('/login', async (req, res) => {
 });
 
 // Simple logout route
-router.post('/logout', async (req, res) => {
+router.get('/logout', async (req, res) => {
   // Destroy the session on server
   req.session.destroy((err) => {
     if (err) {

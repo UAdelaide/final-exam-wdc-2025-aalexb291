@@ -221,7 +221,7 @@ function logout(){
     };
 
     // Open connection to server & send the post data using a POST request
-    xmlhttp.open("POST", "/users/logout", true);
+    xmlhttp.open("GET", "/users/logout", true);
     xmlhttp.send();
 
 }
