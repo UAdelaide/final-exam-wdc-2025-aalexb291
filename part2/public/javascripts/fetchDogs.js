@@ -24,7 +24,7 @@ createApp({
                 const response = await fetch('/users/dogs');
                 if (response.ok) {
                     const data = await response.json();
-                    this.names = data.names;
+                    this.names = data.dogs;
                 } else {
                     console.error('Fetch failed');
                 }
