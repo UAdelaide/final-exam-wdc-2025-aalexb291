@@ -106,7 +106,7 @@ router.get('/dogs', async (req, res) => {
     `, [owner_id]);
 
     if (rows.length === 0) {
-      return res.status(401).json({ error: 'No dogs found' });
+      return res.status(400).json({ error: 'No dogs found' });
     }
 
     res.json({ message: rows[0] });
