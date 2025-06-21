@@ -72,13 +72,14 @@ router.post('/login', async (req, res) => {
 
 // Simple logout route
 router.post('/logout', async (req, res) => {
-  // Destroy session cookie
+  // Destroy the session on server
   req.session.destroy((err) => {
     if (err) {
       console.error('Could not destroy sesion cookie: ', err);
       return res.status(500).json({ error: 'Logout failed' });
     }
 
+    // Clear session cookie
     res.clearCookie('sessionCookie');
 
     res.json({ message: 'Logged out successfully', redirect: '/' });
