@@ -6,6 +6,8 @@ createApp({
 
     data() {
         return {
+            // these variables are used for v-if
+            // 
             imageSrc: '',
             loading: false
         };
