@@ -12,7 +12,11 @@ body {
 }
 
 h1 {
-  color:darkgray
+  color:gray
+}
+
+p {
+  color:gray
 }
 
 .image-container {
