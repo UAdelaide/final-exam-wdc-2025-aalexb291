@@ -179,7 +179,7 @@ function login(){
         password_hash: document.getElementById('password').value
     };
 
-    // Create AJAX Request
+    // Make AJAX Request using Fetch
     fetch("/users/login", {
         method: "POST",
         headers: {
@@ -192,12 +192,6 @@ function login(){
             return response.json();
         }
         throw new Error('Login failed');
-    })
-    .then((data) => {
-        alert("Welcome " + data.user);
-    })
-    .catch((error) => {
-        alert("Login failed");
     });
 
 }
