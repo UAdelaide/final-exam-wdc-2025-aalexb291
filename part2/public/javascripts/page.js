@@ -188,7 +188,11 @@ function login(){
         },
         body: JSON.stringify(user)
     })
-    .then
+    .then(response => {
+        if (response.ok) {
+            return response;
+        }
+    })
 
 }
 
