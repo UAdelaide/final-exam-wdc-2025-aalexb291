@@ -8,7 +8,7 @@ createApp({
         return {
             // this variable is used for v-for
             // names array stores dog names
-            names: []
+            dogNames: []
         };
     },
 
@@ -24,7 +24,7 @@ createApp({
                 const response = await fetch('/users/dogs');
                 if (response.ok) {
                     const data = await response.json();
-                    this.names = data.dogs;
+                    this.dogNames = data.dogs;
                 } else {
                     console.error('Fetch failed');
                 }
