@@ -72,6 +72,7 @@ router.post('/login', async (req, res) => {
 
 // Simple logout route
 router.get('/logout', async (req, res) => {
+  // if you aren't logged in, reject
   if (!req.session.user_id) {
     return res.status(400).json({ error: 'Not loggged in', redirect: '/' });
   }
