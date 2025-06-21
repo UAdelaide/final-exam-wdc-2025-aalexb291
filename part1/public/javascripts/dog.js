@@ -14,7 +14,7 @@ createApp({
         async fetchDogImage() {
             try {
                 const response = await fetch("https://dog.ceo/api/breeds/image/random");
-                const data = response.json();
+                const data = await response.json();
                 this.imageSrc = data.message;
             } catch (error) {
                 console.error(error);
