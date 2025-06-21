@@ -73,7 +73,7 @@ router.post('/login', async (req, res) => {
 // Simple logout route
 router.get('/logout', async (req, res) => {
   if (!req.session.user_id) {
-    return 
+    return res.status(400).json({ error: 'Not loggged in', })
   }
   // Destroy the session on server
   req.session.destroy((err) => {
