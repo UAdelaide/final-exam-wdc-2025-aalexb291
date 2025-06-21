@@ -61,22 +61,6 @@ footer h4 {
     text-transform: uppercase;
 }
 
-.login-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: calc(100vh - 160px); /* Adjust for navbar + footer height */
-  background-color: #fffdd0; /* cream */
-}
-
-.login-form {
-  background-color: #f0dc82; /* buff */
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  width: 300px;
-}
-
 .post {
     border-bottom: 1px solid lightgrey;
     padding: 1em;
