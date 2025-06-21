@@ -11,8 +11,8 @@ createApp({
     },
 
     async mounted() {
-        
-    }
+        await this.fetchDogImage;
+    },
 
     methods: {
         async fetchDogImage() {
