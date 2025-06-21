@@ -7,6 +7,7 @@ const app = express();
 
 // Middleware
 app.use(session({
+    name: 'sessionCookie',
     secret: 'its-a-secret',
     resave: false,
     saveUninitialized: false,
