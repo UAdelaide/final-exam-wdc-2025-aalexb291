@@ -11,9 +11,9 @@ createApp({
     },
 
     methods: {
-        fetchDogImage() {
+        async fetchDogImage() {
             try {
-                response = 
+                response = await fetch(https://dog.ceo/api/breeds/image/random)
             } catch (error) {
                 console.error(error);
             }
