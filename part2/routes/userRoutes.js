@@ -55,7 +55,7 @@ router.post('/login', async (req, res) => {
     req.session.username = rows[0].username;
     req.session.role = rows[0].role;
 
-    // redirect url returned for window.href
+    // redirect url returned for window.location.href call in page.js
     let dashboard;
 
     if (rows[0].role === 'owner') {
