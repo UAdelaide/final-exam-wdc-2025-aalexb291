@@ -20,7 +20,7 @@ p {
 }
 
 button {
-  text-align: right;
+  float: right;
 }
 
 .image-container {
