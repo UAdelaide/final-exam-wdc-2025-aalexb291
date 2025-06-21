@@ -109,19 +109,7 @@ router.get('/dogs', async (req, res) => {
       return res.status(401).json({ error: 'No dogs found' });
     }
 
-    // added express-session cookie building
-    req.session.user_id = rows[0].user_id;
-    req.session.username = rows[0].username;
-    req.session.role = rows[0].role;
-
-    // redirect url returned for window.location.href call in page.js
-    let dashboard;
-
-    if (rows[0].role === 'owner') {
-      dashboard = '/owner-dashboard.html';
-    } else {
-      dashboard = '/walker-dashboard.html';
-    }
+    
 
     res.json({ message: 'Login successful', user: rows[0].username, redirect: dashboard });
   } catch (error) {
