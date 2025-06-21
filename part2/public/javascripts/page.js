@@ -191,12 +191,11 @@ function login(){
     .then((response) => {
         if (response.ok) {
             return response;
-        } else {
-            throw new Error('Login failed');
         }
+        throw new Error('Login failed');
     })
     .then((data) => {
-        
+        alert
     })
 
 }
