@@ -8,8 +8,8 @@ createApp({
         return {
             // these variables are used for v-for
             //
-            dogs: [],
-            loading: false
+            names: [],
+            selected: false
         };
     },
 
