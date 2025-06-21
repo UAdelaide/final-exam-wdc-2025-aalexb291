@@ -195,6 +195,7 @@ function login(){
     })
     .then((data) => {
         alert("Welcome " + data.user);
+        window.location.href = data.redirect;
     })
     .catch((error) => {
         alert("Login failed: " + error);
