@@ -7,7 +7,8 @@ createApp({
     data() {
         return {
             // these variables are used for v-for
-            //
+            // names array stores dog names
+            // selected stores currently selected dog for use in later questions
             names: [],
             selected: ''
         };
